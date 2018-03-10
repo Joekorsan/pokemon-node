@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>pokemon page</title>
+  </head>
+  <body>
+
+<h3>edit <%= pokemon.name %></h3>
+    <form action="/pokemon/edit" method="post">
+      <input hidden type="text" name="name2" value="<%= pokemon.name %>">
+      <input type="text" name="name" placeholder="<%= pokemon.name %>">
+
+      <input type="number" name="cp" placeholder="<%= pokemon.cp %>">
+      <input hidden type="number" name="cp2" value="<%= pokemon.cp %>">
+
+      <input hidden type="text" name="id" value="<%= pokemon.id %>">
+      <select name="trainers">
+      <% trainers.map((trainers)=>{ %>
+      <option value="<%= trainers.id %>" "<%= selected = trainers.id === pokemon.trianer_id ? 'selected' : '' %>" >
+        <%= trainers.name %> </option>
+        <% }) %>
+      </select>
+      <button type="submit">EDIT</button>
+    </form>
+  </body>
+</html>
