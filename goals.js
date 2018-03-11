@@ -9,14 +9,7 @@
 // EXAMPLE: If you have a Raichu with an id of 22 in the database and you click 'assign to gym' then you would set a cookie p1 with a value of 22.
 //
 // NOTE: Your database should always be updated to have the current in_gym status of all Pokemón.
-//
-// #10
-//
-// As a user
-// When I visit the Pokemón home page
-// And I see all Pokemón
-// And less than 2 Pokemón are 'in the gym'
-// Then I see a link 'assign to gym' next to every Pokemón that is not 'in the gym'
+
 // #11
 //
 // When I visit the Pokemón home page
@@ -31,12 +24,9 @@
 // Then I see a link 'remove from gym' next to that Pokemón
 // And I do NOT see a link 'assign to gym' next to that Pokemón
 // Trainers
+
 // #1
 //
-// As a user
-// When I visit /trainers
-// Then I see a list of all Trainers
-// #2
 //
 // When I click on the name of a Trainer
 // Then I am taken to a show page

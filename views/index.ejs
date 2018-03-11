@@ -58,16 +58,20 @@
             </tr>
             <% for(let i = 0; i < pokemon.length; i++){ %>
               <tr>
-                <td><a href="/pokemon/info/<%=pokemon[i].id%>"><%= pokemon[i].name %></a>
+                <td>
+                  <a href="/pokemon/info/<%=pokemon[i].id%>"><%= pokemon[i].name %></a>
                   <div>
-                  <a href="/pokemon/delete/<%= pokemon[i].id %>">DELETE</a> | <a href="/pokemon/edit/<%= pokemon[i].id %>">EDIT</a>
+                    <a href="/pokemon/delete/<%= pokemon[i].id %>">DELETE</a> | <a href="/pokemon/edit/<%= pokemon[i].id %>">EDIT</a> |
+                    <% if(!pokemon[i].in_gym) { %>
+                      <a href="#"> Assign to gym</a>
+                    <% } %>
                   </div>
                 </td>
                 <td><%= pokemon[i].cp %></td>
                 <td><%= pokemon[i].in_gym %></td>
               </tr>
-              <% } %>
-            </table>
+            <% } %>
+          </table>
         </div>
           </div><!-- end of app-content div -->
         </div><!--end main content -->
